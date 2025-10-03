@@ -234,11 +234,11 @@ body {
 .list-unstyled { list-style: none; padding: 0; }
 .list-unstyled li { padding: 0.5rem 0; }
 
-/* Timeline */
 .timeline {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
+  padding: 2rem 0;
 }
 
 .timeline::before {
@@ -256,27 +256,8 @@ body {
   position: relative;
   margin: 2rem 0;
   width: 100%;
-}
-
-.timeline-item:nth-child(odd) .timeline-card { 
-  margin-right: 50%; 
-  text-align: right; 
-  margin-left: 0;
-}
-
-.timeline-item:nth-child(even) .timeline-card { 
-  margin-left: 50%; 
-  margin-right: 0;
-}
-
-@media (max-width: 768px) {
-  .timeline::before { left: 20px; }
-  .timeline-item:nth-child(odd) .timeline-card,
-  .timeline-item:nth-child(even) .timeline-card {
-    margin-left: 50px;
-    margin-right: 0;
-    text-align: right;
-  }
+  display: flex;
+  justify-content: center; 
 }
 
 .timeline-card {
@@ -285,7 +266,9 @@ body {
   border-radius: 15px;
   box-shadow: var(--shadow-soft);
   position: relative;
+  max-width: 600px; 
   width: 100%;
+  text-align: right;
 }
 
 .timeline-header {
@@ -296,9 +279,23 @@ body {
   margin: -1.5rem -1.5rem 1rem -1.5rem;
 }
 
-.timeline-card p { margin-bottom: 1rem; }
+.timeline-card p {
+  margin-bottom: 1rem;
+}
 
-.timeline-card i { color: #28a745; }
+.timeline-card i {
+  color: #28a745;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+  content: '';
+  display: none;
+  }
+  .timeline-item {
+  margin: auto;
+  }
+}
 
 /* Projects */
 .projects-grid {
