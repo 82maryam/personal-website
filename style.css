@@ -7,6 +7,26 @@
   --primary: #ff6b9d;
 }
 
+.profile-circle img,
+#about img {
+  width: 400px;  
+  height: 400px;  
+  object-fit: cover; 
+}
+
+@media (max-width: 768px) {
+  .profile-circle img,
+  #about img {
+    width: 180px;
+    height: 180px;
+    margin: auto;
+  }
+
+
+}
+
+
+
 * {
   box-sizing: border-box;
 }
