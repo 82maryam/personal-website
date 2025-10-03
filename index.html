@@ -26,14 +26,16 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- JS -->
+    <script src="main.js"></script>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand fw-bold fs-4" href="#">
-          <i class="bi bi-flower3 me-2"></i>
-          نام شما
+          <i class="bi bi-flower3 me-2"></i>نام شما
         </a>
         <button
           class="navbar-toggler"
@@ -66,33 +68,253 @@
     </nav>
 
     <!-- Home -->
-    <header id="home" class="min-vh-100 d-flex align-items-center text-center">
-      <div class="container">Home Section</div>
+    <header
+      id="home"
+      class="position-relative min-vh-100 d-flex align-items-center text-center"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="profile-circle">
+              <img
+                src="images/profile.jpg"
+                alt="عکس پروفایل"
+                class="img-fluid rounded-circle shadow-lg"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold handwritten">نام کامل شما</h1>
+            <p class="lead fs-5 mb-4">عنوان شغلی یا تحصیلی شما</p>
+            <a href="#about" class="btn btn-outline-light btn-lg px-4 me-2"
+              >بیشتر بدانید</a
+            >
+            <a href="files/CV.pdf" class="btn btn-light btn-lg px-4" download
+              >دانلود رزومه</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating elements -->
+      <div class="floating-elements">
+        <i class="bi bi-heart-fill float-heart"></i>
+        <i class="bi bi-star-fill float-star"></i>
+        <i class="bi bi-flower1 float-flower"></i>
+      </div>
     </header>
 
     <!-- About -->
     <section id="about" class="py-5">
-      <div class="container">About Section</div>
+      <div class="container">
+        <h2 class="text-center mb-5 display-5 fw-bold title-with-icon">
+          <i class="bi bi-person-heart me-2"></i>درباره من
+        </h2>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <img
+              src="images/profile.jpg"
+              alt="عکس درباره"
+              class="img-fluid rounded-circle shadow-lg mb-5"
+            />
+          </div>
+          <div class="col-lg-6">
+            <p class="lead mb-4 text-muted">متن معرفی کوتاه شما</p>
+            <p class="mb-4 text-muted">علایق و hobbyهای شما</p>
+            <div class="skills-interests">
+              <div class="mb-4">
+                <h5 class="fw-bold mb-2">
+                  <i class="bi bi-stars me-2"></i>مهارت‌ها
+                </h5>
+                <div class="badges-container">
+                  <span class="badge rounded-pill">مهارت 1</span>
+                  <span class="badge rounded-pill">مهارت 2</span>
+                  <span class="badge rounded-pill">مهارت 3</span>
+                </div>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-2">
+                  <i class="bi bi-heart-fill me-2"></i>علایق
+                </h5>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="bi bi-flower2 me-2"></i>علاقه 1
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-music-note-beamed me-2"></i>علاقه 2
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <a
+                href="files/CV.pdf"
+                class="btn btn-primary btn-lg px-4 rounded-pill"
+                download
+                >دانلود رزومه کامل</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Experience -->
     <section id="experience" class="py-5 bg-light">
-      <div class="container">Experience Section</div>
+      <div class="container">
+        <h2 class="text-center mb-5 display-5 fw-bold title-with-icon">
+          <i class="bi bi-briefcase-heart me-2"></i>تجربیات
+        </h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h5>عنوان تجربه 1</h5>
+                <small>تاریخ تجربه</small>
+              </div>
+              <p>توضیح تجربه</p>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle me-2"></i>دستاورد 1</li>
+                <li><i class="bi bi-check-circle me-2"></i>دستاورد 2</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h5>عنوان تجربه 2</h5>
+                <small>تاریخ تجربه</small>
+              </div>
+              <p>توضیح تجربه</p>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle me-2"></i>دستاورد 1</li>
+                <li><i class="bi bi-check-circle me-2"></i>دستاورد 2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects -->
     <section id="projects" class="py-5">
-      <div class="container">Projects Section</div>
+      <div class="container">
+        <h2 class="text-center mb-5 display-5 fw-bold title-with-icon">
+          <i class="bi bi-gem me-2"></i>پروژه‌ها
+        </h2>
+        <div class="projects-scroll">
+          <div class="project-item">
+            <div class="project-card rounded-circle">
+              <img
+                src="images/project1.jpg"
+                alt="پروژه 1"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <h5>نام پروژه 1</h5>
+                <p>توضیح پروژه</p>
+                <a href="#" class="btn btn-outline-light rounded-pill"
+                  >گیت‌هاب</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-card rounded-circle">
+              <img
+                src="images/project2.jpg"
+                alt="پروژه 2"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <h5>نام پروژه 2</h5>
+                <p>توضیح پروژه</p>
+                <a href="#" class="btn btn-outline-light rounded-pill"
+                  >گیت‌هاب</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-card rounded-circle">
+              <img
+                src="images/project3.jpg"
+                alt="پروژه 3"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <h5>نام پروژه 3</h5>
+                <p>توضیح پروژه</p>
+                <a href="#" class="btn btn-outline-light rounded-pill"
+                  >گیت‌هاب</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="py-5 bg-light">
-      <div class="container">Contact Section</div>
+      <div class="container text-center">
+        <h2 class="mb-5 display-5 fw-bold title-with-icon">
+          <i class="bi bi-chat-heart me-2"></i>تماس
+        </h2>
+        <p class="lead mb-5 text-muted">پیام خوشامدگویی</p>
+        <div class="row justify-content-center g-4">
+          <div class="col-md-4">
+            <div class="contact-card rounded">
+              <i class="bi bi-envelope-heart fs-1 mb-3"></i>
+              <h5 class="fw-bold mb-2">ایمیل</h5>
+              <p class="text-muted mb-0">ایمیل شما</p>
+              <a
+                href="mailto:ایمیل"
+                class="btn btn-outline-primary rounded-pill mt-3"
+                >ارسال</a
+              >
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-card rounded">
+              <i class="bi bi-github fs-1 mb-3"></i>
+              <h5 class="fw-bold mb-2">گیت‌هاب</h5>
+              <p class="text-muted mb-0">نام کاربری</p>
+              <a href="#" class="btn btn-outline-primary rounded-pill mt-3"
+                >پروفایل</a
+              >
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-card rounded">
+              <i class="bi bi-linkedin fs-1 mb-3"></i>
+              <h5 class="fw-bold mb-2">لینکدین</h5>
+              <p class="text-muted mb-0">نام کاربری</p>
+              <a href="#" class="btn btn-outline-primary rounded-pill mt-3"
+                >اتصال</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="text-center py-4">
-      <div class="container">Footer</div>
+      <div class="container">
+        <p class="mb-3">&copy; ۱۴۰۴ نام شما. با عشق ساخته شد.</p>
+        <div class="d-flex justify-content-center gap-4">
+          <a href="#" class="text-decoration-none"
+            ><i class="bi bi-github fs-3"></i
+          ></a>
+          <a href="#" class="text-decoration-none"
+            ><i class="bi bi-linkedin fs-3"></i
+          ></a>
+          <a href="mailto:ایمیل" class="text-decoration-none"
+            ><i class="bi bi-envelope fs-3"></i
+          ></a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
