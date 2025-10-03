@@ -2,21 +2,8 @@
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>پورتفولیو - نام شما</title>
-
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Bootstrap Icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پورتفولیو - مریم معصومی</title>
 
     <!-- Google Fonts -->
     <link
@@ -24,43 +11,51 @@
       rel="stylesheet"
     />
 
+    <!-- Bootstrap Icons (icon library, not framework) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- JS -->
-    <script src="main.js"></script>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar fixed-top">
       <div class="container">
         <a class="navbar-brand fw-bold fs-4" href="#">
-          <i class="bi bi-flower3 me-2"></i>نام شما
+          <i class="bi bi-flower3 me-2"></i>مریم معصومی
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
+        <button class="navbar-toggler" type="button" onclick="toggleNav()">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link px-2" href="#home">خانه</a>
+              <a class="nav-link px-2" href="#home" onclick="closeNav()"
+                >خانه</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link px-2" href="#about">درباره من</a>
+              <a class="nav-link px-2" href="#about" onclick="closeNav()"
+                >درباره من</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link px-2" href="#experience">تجربیات</a>
+              <a class="nav-link px-2" href="#experience" onclick="closeNav()"
+                >تجربیات</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link px-2" href="#projects">پروژه‌ها</a>
+              <a class="nav-link px-2" href="#projects" onclick="closeNav()"
+                >پروژه‌ها</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link px-2" href="#contact">تماس</a>
+              <a class="nav-link px-2" href="#contact" onclick="closeNav()"
+                >تماس</a
+              >
             </li>
           </ul>
         </div>
@@ -78,20 +73,31 @@
             <div class="profile-circle">
               <img
                 src="images/profile.jpg"
-                alt="عکس پروفایل"
+                alt="عکس پروفایل مریم معصومی"
                 class="img-fluid rounded-circle shadow-lg"
               />
             </div>
           </div>
           <div class="col-lg-6">
-            <h1 class="display-4 fw-bold handwritten">نام کامل شما</h1>
-            <p class="lead fs-5 mb-4">عنوان شغلی یا تحصیلی شما</p>
-            <a href="#about" class="btn btn-outline-light btn-lg px-4 me-2"
-              >بیشتر بدانید</a
+            <h1 class="display-4 fw-bold handwritten">مریم معصومی</h1>
+            <p class="lead fs-5 mb-4">
+              دانشجوی علوم کامپیوتر دانشگاه صنعتی امیرکبیر | توسعه‌دهنده Go و
+              Back-End
+            </p>
+            <a
+              href="#about"
+              class="btn btn-outline-light btn-lg px-4 me-2"
+              onclick="closeNav()"
             >
-            <a href="files/CV.pdf" class="btn btn-light btn-lg px-4" download
-              >دانلود رزومه</a
+              بیشتر بدانید
+            </a>
+            <a
+              href="files/مریم معصومی.pdf"
+              class="btn btn-light btn-lg px-4"
+              download
             >
+              دانلود رزومه
+            </a>
           </div>
         </div>
       </div>
@@ -114,22 +120,44 @@
           <div class="col-lg-6">
             <img
               src="images/profile.jpg"
-              alt="عکس درباره"
+              alt="عکس درباره مریم معصومی"
               class="img-fluid rounded-circle shadow-lg mb-5"
             />
           </div>
           <div class="col-lg-6">
-            <p class="lead mb-4 text-muted">متن معرفی کوتاه شما</p>
-            <p class="mb-4 text-muted">علایق و hobbyهای شما</p>
+            <p class="lead mb-4 text-muted">
+              دانشجوی سال آخر علوم کامپیوتر در دانشگاه صنعتی امیرکبیر هستم.
+              همیشه با پشتکار و انگیزه در دنیای برنامه‌نویسی به دنبال یادگیری
+              چیزهای جدید و چالش‌ها هستم.
+            </p>
+            <p class="mb-4 text-muted">
+              مسیرم رو با کار به عنوان برنامه‌نویس React در تیم‌ها شروع کردم و
+              تجربیات چالش‌ها و چیزهای جدید در این مسیر باعث شد تجربه‌ای در
+              طراحی UI/UX در تیم MagnetXT هم داشته باشم. همچنین به خصوص به زبان
+              Go علاقه‌مند هستم و تمرکزم بیشتر روی یادگیری مفاهیم Back-End است.
+              در کنار اون، آشنایی نسبی با فرانت‌اند دارم و از ترکیب این حوزه‌ها
+              لذت می‌برم. همیشه دوست دارم در محیط‌های حرفه‌ای و پویا کار کنم و
+              تلاش می‌کنم با کار تیمی به اهداف بزرگ برسم.
+            </p>
             <div class="skills-interests">
               <div class="mb-4">
                 <h5 class="fw-bold mb-2">
                   <i class="bi bi-stars me-2"></i>مهارت‌ها
                 </h5>
                 <div class="badges-container">
-                  <span class="badge rounded-pill">مهارت 1</span>
-                  <span class="badge rounded-pill">مهارت 2</span>
-                  <span class="badge rounded-pill">مهارت 3</span>
+                  <span class="badge rounded-pill">C/C++</span>
+                  <span class="badge rounded-pill">Python</span>
+                  <span class="badge rounded-pill">Go</span>
+                  <span class="badge rounded-pill">PostgreSQL</span>
+                  <span class="badge rounded-pill">MySQL</span>
+                  <span class="badge rounded-pill">MongoDB</span>
+                  <span class="badge rounded-pill">Kubernetes</span>
+                  <span class="badge rounded-pill">HTML/CSS</span>
+                  <span class="badge rounded-pill">JavaScript</span>
+                  <span class="badge rounded-pill">React.js</span>
+                  <span class="badge rounded-pill">Bootstrap</span>
+                  <span class="badge rounded-pill">Figma</span>
+                  <span class="badge rounded-pill">Canva</span>
                 </div>
               </div>
               <div>
@@ -138,21 +166,28 @@
                 </h5>
                 <ul class="list-unstyled">
                   <li class="mb-2">
-                    <i class="bi bi-flower2 me-2"></i>علاقه 1
+                    <i class="bi bi-flower2 me-2"></i>یادگیری مفاهیم Back-End و
+                    Go
                   </li>
                   <li class="mb-2">
-                    <i class="bi bi-music-note-beamed me-2"></i>علاقه 2
+                    <i class="bi bi-music-note-beamed me-2"></i>طراحی UI/UX و
+                    کار تیمی
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-code-slash me-2"></i>حل چالش‌های
+                    برنامه‌نویسی
                   </li>
                 </ul>
               </div>
             </div>
             <div class="text-center mt-4">
               <a
-                href="files/CV.pdf"
+                href="files/مریم معصومی.pdf"
                 class="btn btn-primary btn-lg px-4 rounded-pill"
                 download
-                >دانلود رزومه کامل</a
               >
+                دانلود رزومه کامل
+              </a>
             </div>
           </div>
         </div>
@@ -169,26 +204,68 @@
           <div class="timeline-item">
             <div class="timeline-card">
               <div class="timeline-header">
-                <h5>عنوان تجربه 1</h5>
-                <small>تاریخ تجربه</small>
+                <h5>طراح UI/UX - شرکت Magnet XT</h5>
+                <small>۱۴۰۳/۰۶ - ۱۴۰۴/۰۱</small>
               </div>
-              <p>توضیح تجربه</p>
+              <p>
+                طراحی کامل UI و UX محصولات. اجرای تحقیقات کاربر و ترسیم دقیق
+                User Flows. ساخت و تست پروتوتایپ‌های تعاملی برای بهبود کاربری.
+                طراحی صفحات فرود و داشبوردهای واکنش‌گرا با React برای تجربه
+                کاربری بهتر در موبایل.
+              </p>
               <ul class="list-unstyled">
-                <li><i class="bi bi-check-circle me-2"></i>دستاورد 1</li>
-                <li><i class="bi bi-check-circle me-2"></i>دستاورد 2</li>
+                <li>
+                  <i class="bi bi-check-circle me-2"></i>بهبود تجربه کاربری با
+                  پروتوتایپ‌های تعاملی
+                </li>
+                <li>
+                  <i class="bi bi-check-circle me-2"></i>طراحی ریسپانسیو برای
+                  دستگاه‌های موبایل
+                </li>
               </ul>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-card">
               <div class="timeline-header">
-                <h5>عنوان تجربه 2</h5>
-                <small>تاریخ تجربه</small>
+                <h5>برنامه‌نویس React - شرکت Saha</h5>
+                <small>۱۴۰۳/۱۱ - ۱۴۰۳/۱۲</small>
               </div>
-              <p>توضیح تجربه</p>
+              <p>
+                طراحی صفحات وب ریسپانسیو متناسب با تمامی دستگاه‌ها. توانایی حل
+                مسائل پیچیده و بهینه‌سازی کد با استفاده از Hooks React.
+              </p>
               <ul class="list-unstyled">
-                <li><i class="bi bi-check-circle me-2"></i>دستاورد 1</li>
-                <li><i class="bi bi-check-circle me-2"></i>دستاورد 2</li>
+                <li>
+                  <i class="bi bi-check-circle me-2"></i>حل مسائل پیچیده با
+                  Hooks
+                </li>
+                <li>
+                  <i class="bi bi-check-circle me-2"></i>طراحی ریسپانسیو برای
+                  همه دستگاه‌ها
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h5>کار با دستگاه Becamplace - شرکت Rayan Nik</h5>
+                <small>۱۴۰۱/۰۴ - ۱۴۰۱/۰۶</small>
+              </div>
+              <p>
+                انجام تست‌های تخصصی موفقیت‌آمیز با دستگاه Becamplace در شرکت
+                Rayan Nik. تضمین انطباق محصولات با استانداردهای کیفی در دوره
+                سه‌ماهه. مدیریت و نگهداری بسته دستگاه Becamplace با هدف افزایش
+                سرعت عمل و کاهش زمان توقف خط تولید.
+              </p>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="bi bi-check-circle me-2"></i>کاهش زمان توقف خط تولید
+                </li>
+                <li>
+                  <i class="bi bi-check-circle me-2"></i>تضمین استانداردهای کیفی
+                </li>
               </ul>
             </div>
           </div>
@@ -202,52 +279,92 @@
         <h2 class="text-center mb-5 display-5 fw-bold title-with-icon">
           <i class="bi bi-gem me-2"></i>پروژه‌ها
         </h2>
-        <div class="projects-scroll">
+        <div class="projects-grid">
           <div class="project-item">
-            <div class="project-card rounded-circle">
+            <div class="project-card">
               <img
                 src="images/project1.jpg"
-                alt="پروژه 1"
+                alt="پردازنده مدیریت زمان"
                 class="project-img"
               />
               <div class="project-overlay">
-                <h5>نام پروژه 1</h5>
-                <p>توضیح پروژه</p>
-                <a href="#" class="btn btn-outline-light rounded-pill"
-                  >گیت‌هاب</a
+                <h5>پردازنده مدیریت زمان در C</h5>
+                <p>
+                  پیاده‌سازی الگوریتم‌های FCFS، SJF، Round Robin، محاسبه میانگین
+                  زمان انتظار، پاسخ و اتمام برای تحلیل مفاهیم عامل‌سیستم.
+                </p>
+                <a
+                  href="https://github.com/82maryam/time-processor"
+                  class="btn btn-outline-light rounded-pill"
+                  target="_blank"
                 >
+                  گیت‌هاب
+                </a>
               </div>
             </div>
           </div>
           <div class="project-item">
-            <div class="project-card rounded-circle">
+            <div class="project-card">
               <img
                 src="images/project2.jpg"
-                alt="پروژه 2"
+                alt="مسئله TA خواب‌آلود"
                 class="project-img"
               />
               <div class="project-overlay">
-                <h5>نام پروژه 2</h5>
-                <p>توضیح پروژه</p>
-                <a href="#" class="btn btn-outline-light rounded-pill"
-                  >گیت‌هاب</a
+                <h5>مسئله TA خواب‌آلود در C</h5>
+                <p>مدل‌سازی مسئله TA.</p>
+                <a
+                  href="https://github.com/82maryam/sleeping-barber"
+                  class="btn btn-outline-light rounded-pill"
+                  target="_blank"
                 >
+                  گیت‌هاب
+                </a>
               </div>
             </div>
           </div>
           <div class="project-item">
-            <div class="project-card rounded-circle">
+            <div class="project-card">
               <img
                 src="images/project3.jpg"
-                alt="پروژه 3"
+                alt="افزودن ماژول به xv6"
                 class="project-img"
               />
               <div class="project-overlay">
-                <h5>نام پروژه 3</h5>
-                <p>توضیح پروژه</p>
-                <a href="#" class="btn btn-outline-light rounded-pill"
-                  >گیت‌هاب</a
+                <h5>افزودن ماژول به هسته xv6</h5>
+                <p>
+                  تمرکز بر هسته آموزشی Unix-like xv6، پیاده‌سازی و ادغام ویژگی
+                  جدید، برنامه‌نویسی فراخوانی‌های کرنل و سیستم.
+                </p>
+                <a
+                  href="https://github.com/82maryam/xv6-module"
+                  class="btn btn-outline-light rounded-pill"
+                  target="_blank"
                 >
+                  گیت‌هاب
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-card">
+              <img
+                src="images/project4.jpg"
+                alt="شبیه‌سازی همزمانی کلاسیک"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <h5>شبیه‌سازی مسئله همزمانی کلاسیک</h5>
+                <p>
+                  برنامه‌نویسی عامل‌سیستم برای هماهنگی بین رشته‌های پردازشی.
+                </p>
+                <a
+                  href="https://github.com/82maryam/concurrency-simulation"
+                  class="btn btn-outline-light rounded-pill"
+                  target="_blank"
+                >
+                  گیت‌هاب
+                </a>
               </div>
             </div>
           </div>
@@ -261,38 +378,50 @@
         <h2 class="mb-5 display-5 fw-bold title-with-icon">
           <i class="bi bi-chat-heart me-2"></i>تماس
         </h2>
-        <p class="lead mb-5 text-muted">پیام خوشامدگویی</p>
+        <p class="lead mb-5 text-muted">
+          برای همکاری یا سؤالات، با من در ارتباط باشید. مشتاق شنیدن ایده‌های شما
+          هستم!
+        </p>
         <div class="row justify-content-center g-4">
           <div class="col-md-4">
             <div class="contact-card rounded">
               <i class="bi bi-envelope-heart fs-1 mb-3"></i>
               <h5 class="fw-bold mb-2">ایمیل</h5>
-              <p class="text-muted mb-0">ایمیل شما</p>
+              <p class="text-muted mb-0">Maryam345masoomi@gmail.com</p>
               <a
-                href="mailto:ایمیل"
+                href="mailto:Maryam345masoomi@gmail.com"
                 class="btn btn-outline-primary rounded-pill mt-3"
-                >ارسال</a
               >
+                ارسال
+              </a>
             </div>
           </div>
           <div class="col-md-4">
             <div class="contact-card rounded">
               <i class="bi bi-github fs-1 mb-3"></i>
               <h5 class="fw-bold mb-2">گیت‌هاب</h5>
-              <p class="text-muted mb-0">نام کاربری</p>
-              <a href="#" class="btn btn-outline-primary rounded-pill mt-3"
-                >پروفایل</a
+              <p class="text-muted mb-0">82maryam</p>
+              <a
+                href="https://github.com/82maryam"
+                class="btn btn-outline-primary rounded-pill mt-3"
+                target="_blank"
               >
+                پروفایل
+              </a>
             </div>
           </div>
           <div class="col-md-4">
             <div class="contact-card rounded">
               <i class="bi bi-linkedin fs-1 mb-3"></i>
               <h5 class="fw-bold mb-2">لینکدین</h5>
-              <p class="text-muted mb-0">نام کاربری</p>
-              <a href="#" class="btn btn-outline-primary rounded-pill mt-3"
-                >اتصال</a
+              <p class="text-muted mb-0">maryam-masoomi</p>
+              <a
+                href="https://linkedin.com/in/maryam-masoomi"
+                class="btn btn-outline-primary rounded-pill mt-3"
+                target="_blank"
               >
+                اتصال
+              </a>
             </div>
           </div>
         </div>
@@ -302,19 +431,32 @@
     <!-- Footer -->
     <footer class="text-center py-4">
       <div class="container">
-        <p class="mb-3">&copy; ۱۴۰۴ نام شما. با عشق ساخته شد.</p>
+        <p class="mb-3">&copy; ۱۴۰۴ مریم معصومی. با عشق ساخته شد.</p>
         <div class="d-flex justify-content-center gap-4">
-          <a href="#" class="text-decoration-none"
-            ><i class="bi bi-github fs-3"></i
-          ></a>
-          <a href="#" class="text-decoration-none"
-            ><i class="bi bi-linkedin fs-3"></i
-          ></a>
-          <a href="mailto:ایمیل" class="text-decoration-none"
-            ><i class="bi bi-envelope fs-3"></i
-          ></a>
+          <a
+            href="https://github.com/82maryam"
+            class="text-decoration-none"
+            target="_blank"
+          >
+            <i class="bi bi-github fs-3"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/maryam-masoomi"
+            class="text-decoration-none"
+            target="_blank"
+          >
+            <i class="bi bi-linkedin fs-3"></i>
+          </a>
+          <a
+            href="mailto:Maryam345masoomi@gmail.com"
+            class="text-decoration-none"
+          >
+            <i class="bi bi-envelope fs-3"></i>
+          </a>
         </div>
       </div>
     </footer>
+
+    <script src="main.js"></script>
   </body>
 </html>
